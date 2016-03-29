@@ -2,7 +2,7 @@
 <html>
 <body>
 
-<h1>NDSLabs Cowsay Example!</h1>
+<h1>NDSLabs Cowsay Example</h1>
 
 <?php 
 // Allow from any origin
