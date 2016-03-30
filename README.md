@@ -55,7 +55,7 @@ docker push REPOSITORY/IMAGE[:VERSION]
 
 NOTE: If VERSION is not specified, "latest" is assumed.
 
-## NDSLabs Spec
+### NDSLabs Spec
 The **spec** is our way of telling NDSLabs what an image needs in order to run. 
 ```js
 {
@@ -66,7 +66,7 @@ The **spec** is our way of telling NDSLabs what an image needs in order to run.
 ```
 
 
-### Loading a Custom Spec into NDSLabs
+#### Loading a Custom Spec into NDSLabs
 Run the following command to log into the NDSLabs CLI as admin:
 ```bash
 ndslabsctl login admin
@@ -77,6 +77,7 @@ NOTE: The default admin password is "admin"
 Then, run the following command to load this custom spec into NDSLabs:
 ```bash
 ndslabsctl add service -f cowsay.json
+```
 
 ### Examples
 Obtain a local copy of this tutorial by running
