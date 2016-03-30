@@ -3,7 +3,7 @@
 ## Prerequisites
 
 ### System Shell
-The sysmtem-shell is a small docker image that contains everything needed to begin running your own instance of NDSLabs in minutes:
+The system-shell is a small docker image that contains everything needed to begin running your own instance of NDSLabs in minutes:
 ```bash
 eval $(docker run --rm -it ndslabs/system-shell usage docker)
 ```
