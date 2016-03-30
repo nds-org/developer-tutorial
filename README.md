@@ -89,7 +89,7 @@ Listed below are all possible fields of a spec, but you do not need to define se
   "ports": [
     {
       "port": "A port number to expose",
-      "protocol": "The protocol of this exposed port (HTTP, TCP, UDP, etc)"
+      "protocol": "The protocol of this exposed port  must be lowercase (i.e. http, tcp, udp, etc)"
     }
   ],
   "volumeMounts": [
