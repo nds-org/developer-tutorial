@@ -1,0 +1,14 @@
+{
+    "key": "mysql",
+    "label": "MySQL",
+    "image": "mysql:latest",
+    "description": "An open-source relational database management system",
+    "access": "internal",
+    "display": "standalone",
+    "ports": [
+        { "port": 3306, "protocol": "tcp" }
+    ],
+    "volumeMounts": [
+      { "name": "mysql", "mountPath": "/var/lib/mysql" }
+    ]
+}
