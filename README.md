@@ -1,6 +1,7 @@
 # NDSLabs Developer Tutorial
 
-## Prerequisites
+## NDSLabs Setup
+There are a few automated steps involved in setting up your own instance of NDSLabs.
 
 ### System Shell
 The system-shell is a small docker image that contains everything needed to begin running your own instance of NDSLabs in minutes:
@@ -20,10 +21,8 @@ Still inside of system-shell, run the following command to start running NDSLabs
 nds-labs-up.sh
 ``` 
 
-Now that we have a 
-
 #### Clowder Tool Server (Optional)
-If you wish to experiment with the "Tool Server" addon for Clowder, you can run your own instance of the Tool Server:
+If you wish to experiment with the "Tool Server" addon for Clowder, you can run your own instance of the Tool Server from the system-shell:
 ```bash
 toolsrv.sh
 ```
@@ -42,19 +41,22 @@ In order to load a custom service into NDSLabs, only two things are needed:
 ### Docker Image
 The first thing you will need is a docker image.
 
-You can find plenty of images on hub.docker.com, including all images used in NDSLabs.
+You can find plenty of images on hub.docker.com, including all Docker images used in NDSLabs.
 
-You can build an image yourself from source by executing the following command:
+#### Authoring a Dockerfile
+Can't find an existing image for your service?
+
+You can always build an image yourself from source by executing the following command:
 ```bash
-docker build -t [REPOSITORY_NAME/]IMAGE_NAME[:VERSION_TAG] .
+docker build -t [REPOSITORY/]IMAGE[:VERSION] .
 ```
 
 #### Sharing Your Images
 If you have an account on Docker Hub, you can push this image to make it available to NDSLabs and others to reuse.
 
 ```bash
+docker tag IMAGE USERNAME/IMAGE[:VERSION]
 docker login
-docker tag USERNAME/IMAGE[:VERSION]
 docker push USERNAME/IMAGE[:VERSION]
 ```
 
@@ -63,7 +65,7 @@ NOTE: If VERSION is not specified, "latest" is assumed.
 ### NDSLabs Spec
 The **spec** is our way of telling NDSLabs what an image needs in order to run.
 
-Listed below are all possible fields of a spec, but you do not need to define sections that you are not using:
+Listed below are all possible fields of a spec (NOTE: you do **not** need to define sections that you do not plan to use):
 ```js
 {
   "key": "A unique identifier for this service - may only contain lowercase alpha-numeric characters",
@@ -75,7 +77,8 @@ Listed below are all possible fields of a spec, but you do not need to define se
       "key": "The key of another service that this spec depends on",
       "required": "True if this dependency is required. False if it is optional",
       "shareConfig": "True if any config from the dependency should be copied into this one"
-    }
+    },
+      ...
   ],
   "config": [
     {
@@ -84,19 +87,22 @@ Listed below are all possible fields of a spec, but you do not need to define se
       "label": "The label for this property that will appear in the UI",
       "isPassword": "True if this variable reprents a password - this tells the UI to generate a password box and to allow the user to generate a random value for this field",
       "canOverride": "True if this variable can be overridden by the user, if they so desire"
-    }
+    },
+      ...
   ],
   "ports": [
     {
       "port": "A port number to expose",
       "protocol": "The protocol of this exposed port  must be lowercase (i.e. http, tcp, udp, etc)"
-    }
+    },
+      ...
   ],
   "volumeMounts": [
     {
       "name": "The unique identifier of this volume mount - this must match an existing volume",
       "mountPath": "The absolute path of the destination inside of the container"
-    }
+    },
+      ...
   ]
 }
 ```
