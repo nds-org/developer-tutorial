@@ -72,6 +72,8 @@ Listed below are all possible fields of a spec (NOTE: you do **not** need to def
   "label": "How this service should appear in the UI",
   "image": "A docker image, formatted as repository/image:version",
   "description": "A short description of what this service does that will appear in the UI",
+  "access": "external if browser needs to access, internal if other services need to access, none otherwise",
+  "display": "stack if it should be displayed at the top-level in the UI, standalone if it should be displayed under the 'Show Standalones' checkbox" in the UI, none otherwise",
   "depends": [
     {
       "key": "The key of another service that this spec depends on",
@@ -119,6 +121,8 @@ Then, run the following command to load this custom spec into NDSLabs:
 ```bash
 ndslabsctl add service -f spec.json
 ```
+
+Now reloading the
 
 ### Examples
 Obtain a local copy of this tutorial by running
