@@ -8,6 +8,6 @@
     "isPublic": true,
     "isStandalone": true,
     "ports": [
-        { "port": 80, "protocol": "tcp" }
+        { "port": 80, "protocol": "http" }
     ]
 }

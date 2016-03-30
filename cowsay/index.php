@@ -2,9 +2,9 @@
 <html>
 <body>
 
-<h1>NDSLabs Cowsay Example</h1>
+<h2>Cowsay</h2>
 
-<?php 
+<!-- <?php 
 // Allow from any origin
 if (isset($_SERVER['HTTP_ORIGIN'])) {
     header("Access-Control-Allow-Origin: {$_SERVER['HTTP_ORIGIN']}");
@@ -30,7 +30,14 @@ foreach ($output as $value)
     echo $value."\n";
 
 echo "</pre>";
-?>  
+?>  -->
+
+
+<?php
+echo "<pre>";
+echo "`/usr/games/fortune -a | /usr/games/cowsay`";
+echo "</pre>";
+?>
 
 </body>
 </html>
