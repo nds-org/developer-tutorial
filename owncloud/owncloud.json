@@ -1,7 +1,7 @@
 {
     "key": "owncloud",
     "label": "ownCloud",
-    "image": "ndslabs/owncloud:latest",
+    "image": "owncloud:latest",
     "description": "A self-hosted file sync and share server",
     "access": "external",
     "display": "stack",

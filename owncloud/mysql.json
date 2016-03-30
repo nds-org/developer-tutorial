@@ -5,6 +5,12 @@
     "description": "An open-source relational database management system",
     "access": "internal",
     "display": "standalone",
+    "config": [
+      { "name": "MYSQL_ROOT_PASSWORD", "value": "",         "label": "Root Password", "canOverride": false, "isPassword": true  },
+      { "name": "MYSQL_DATABASE",      "value": "owncloud", "label": "Database",      "canOverride": false, "isPassword": false },
+      { "name": "MYSQL_USER",          "value": "username", "label": "Username",      "canOverride": true,  "isPassword": false },
+      { "name": "MYSQL_PASSWORD",      "value": "",         "label": "Password",      "canOverride": true,  "isPassword": true  }
+    ],
     "ports": [
         { "port": 3306, "protocol": "tcp" }
     ],

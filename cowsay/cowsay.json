@@ -1,6 +1,6 @@
 {
     "key": "cowsay",
-    "label": "NDSLabs Cowsay Example",
+    "label": "Cowsay",
     "image": "ndslabs/cowsay-php:latest",
     "description": "An example of a custom spec loaded into NDSLabs",
     "access": "external",
