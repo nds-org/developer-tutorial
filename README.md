@@ -46,7 +46,12 @@ You can find plenty of images on hub.docker.com, including all Docker images use
 #### Authoring a Dockerfile
 Can't find an existing image for your service?
 
-You can always build an image yourself from source by executing the following command:
+Some Dockerfile examples are included in this tutorial to get your started.
+
+More information regarding best practices for authoring a Dockerfile can be found here: https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/
+
+#### Building an Image
+You can build an image yourself from a Dockerfile by executing the following command:
 ```bash
 docker build -t [REPOSITORY/]IMAGE[:VERSION] .
 ```

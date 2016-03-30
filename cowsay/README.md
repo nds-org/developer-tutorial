@@ -15,7 +15,7 @@ Now that we have a Docker image for our service, we need to wrap it in a spec:
 ```js
 {
     "key": "cowsay",
-    "label": "NDSLabs Cowsay Example",
+    "label": "Cowsay",
     "image": "ndslabs/cowsay-php:latest",
     "description": "An example of a custom spec loaded into NDSLabs",
     "access": "external",
@@ -28,7 +28,7 @@ Now that we have a Docker image for our service, we need to wrap it in a spec:
 
 The above spec defines how NDSLabs will use the "cowsay-php" image that we built above.
 
-### Loading a Custom Spec into NDSLabs
+### Loading Cowsay into NDSLabs
 Run the following command to log into the NDSLabs CLI as admin:
 ```bash
 ndslabsctl login admin
@@ -41,11 +41,11 @@ Then, run the following command to load this custom spec into NDSLabs:
 ndslabsctl add service -f cowsay.json
 ```
 
-### Testing the Spec
-Now that we have our spec loaded, let's try to create an instance of it in NDSLabs!
+### Testing Cowsay
+Now that we have our cowsay spec loaded, let's try to create an instance of it in NDSLabs!
 
-Navigate your browser to your instance of NDSLabs. You should now see your new service listed on the left-side.
+Navigate your browser to your instance of NDSLabs. You should now see "Cowsay" listed with the other services.
 
-Choose "Add" next to your newly-added service and step through the wizard.
+Choose "Add" next to "Cowsay" and step through the wizard.
 
-Start up the stack once it has been created, navigate to its endpoint, and admire your cow and all its majesty.
+Start up the "Cowsay" stack once it has been created, navigate to its endpoint, and admire your cow in all its majesty.
