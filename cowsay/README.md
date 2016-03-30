@@ -1,7 +1,4 @@
 # NDSLabs Cowsay Example
-In order to load a custom service into NDSLabs, only two things are needed:
-* A Docker Image
-* A JSON spec describing the Docker Image
 
 ## Docker Image
 The first thing you will need is a docker image. You can find plenty of images on hub.docker.com.
@@ -21,7 +18,11 @@ docker push REPOSITORY/IMAGE[:VERSION]
 ```
 
 ## NDSLabs Spec
+Now that we have a Docker image for our service, we need to wrap it in a spec.
 
+```js
+
+```
 
 ### Loading a Custom Spec into NDSLabs
 Run the following command to log into the NDSLabs CLI as admin:
