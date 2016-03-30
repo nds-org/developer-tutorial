@@ -39,7 +39,7 @@ NOTE: The default admin password is "admin"
 Then, run the following command to load this custom spec into NDSLabs:
 ```bash
 ndslabsctl add service -f cowsay.json
-``
+```
 
 ### Testing the Spec
 Now that we have our spec loaded, let's try to create an instance of it in NDSLabs!
