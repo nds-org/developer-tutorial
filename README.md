@@ -1,13 +1,8 @@
 # NDSLabs Developer Tutorial
 
-## Clone This Repository
-Obtain a local copy of this tutorial by running
+## Prerequisites
 
-```bash
-git clone https://github.com/nds-org/developer-tutorial.git
-```
-
-## NDSLabs System Shell
+### System Shell
 The sysmtem-shell is a small docker image that contains everything needed to begin running your own instance of NDSLabs in minutes:
 ```bash
 eval $(docker run --rm -it ndslabs/system-shell usage docker)
@@ -38,4 +33,13 @@ Make sure to specify the **Public IP** of any Clowder instances you want to comm
 This can be done from the "Advanced Configuration" section of the Configuration Wizard.
 
 ## Customizing NDSLabs
-Now that we have our very own instance
+Now that you have your own instance of NDSLabs running, its time to customize it!
+
+### Clone This Repository
+Obtain a local copy of this tutorial by running
+```bash
+git clone https://github.com/nds-org/developer-tutorial.git
+```
+
+### Cowsay
+An extremely simple example to introduce Docker and the NDSLabs service spec.
