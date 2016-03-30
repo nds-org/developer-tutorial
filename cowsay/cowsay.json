@@ -3,10 +3,8 @@
     "label": "NDSLabs Cowsay Example",
     "image": "ndslabs/cowsay-php:latest",
     "description": "An example of a custom spec loaded into NDSLabs",
-    "isStack": true,
-    "isService": true,
-    "isPublic": true,
-    "isStandalone": true,
+    "access": "external",
+    "display": "stack",
     "ports": [
         { "port": 80, "protocol": "http" }
     ]
