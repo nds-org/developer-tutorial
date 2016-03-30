@@ -122,7 +122,7 @@ Then, run the following command to load this custom spec into NDSLabs:
 ndslabsctl add service -f spec.json
 ```
 
-Now reloading the
+Now reloading the UI should show your new service(s) listed and ready to add!
 
 ### Examples
 Obtain a local copy of this tutorial by running
