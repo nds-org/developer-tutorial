@@ -113,7 +113,14 @@ Listed below are all possible fields of a spec (NOTE: you do **not** need to def
       "mountPath": "The absolute path of the destination inside of the container"
     },
       ...
-  ]
+  ],
+  "readinessProbe": {
+    "type": "Must be one of http / tcp",
+    "path": "For HTTP probes, the full address / path to probe",
+    "port": "The port number to query",
+    "initialDelay": "How long to wait before starting the probe",
+    "timeout": "How long to wait before stopping the probe"
+  }
 }
 ```
 
