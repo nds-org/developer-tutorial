@@ -1,10 +1,10 @@
-# NDSLabs Developer Tutorial
+# NDS Labs Developer Tutorial
 
-## NDSLabs Setup
-There are a few automated steps involved in setting up your own instance of NDSLabs.
+## NDS Labs Setup
+There are a few automated steps involved in setting up your own instance of NDS Labs.
 
 ### System Shell
-The system-shell is a small docker image that contains everything needed to begin running your own instance of NDSLabs in minutes:
+The system-shell is a small docker image that contains everything needed to begin running your own instance of NDS Labs in minutes:
 ```bash
 eval $(docker run --rm -it ndslabs/system-shell usage docker)
 ```
@@ -15,8 +15,8 @@ From the system-shell, run the following command to start running a local single
 kube-up.sh
 ```
 
-### Start NDSLabs
-Still inside of system-shell, run the following command to start running NDSLabs:
+### Start NDS Labs
+Still inside of system-shell, run the following command to start running NDS Labs:
 ```bash
 nds-labs-up.sh
 ``` 
@@ -31,17 +31,17 @@ Make sure to specify the **Public IP** of any Clowder instances you want to comm
 
 This can be done from the "Advanced Configuration" section of the Configuration Wizard.
 
-## Customizing NDSLabs
-Now that you have your own instance of NDSLabs running, its time to customize it!
+## Customizing NDS Labs
+Now that you have your own instance of NDS Labs running, its time to customize it!
 
-In order to load a custom service into NDSLabs, only two things are needed:
+In order to load a custom service into NDS Labs, only two things are needed:
 * A Docker Image
 * A JSON spec describing the Docker Image
 
 ### Docker Image
 The first thing you will need is a docker image.
 
-You can find plenty of images on hub.docker.com, including all Docker images used in NDSLabs.
+You can find plenty of images on hub.docker.com, including all Docker images used in NDS Labs.
 
 #### Authoring a Dockerfile
 Can't find an existing image for your service?
@@ -57,7 +57,7 @@ docker build -t [REPOSITORY/]IMAGE[:VERSION] .
 ```
 
 #### Sharing Your Images
-If you have an account on Docker Hub, you can push this image to make it available to NDSLabs and others to reuse.
+If you have an account on Docker Hub, you can push this image to make it available to NDS Labs and others to reuse.
 
 ```bash
 docker tag IMAGE USERNAME/IMAGE[:VERSION]
@@ -67,8 +67,8 @@ docker push USERNAME/IMAGE[:VERSION]
 
 NOTE: If VERSION is not specified, "latest" is assumed.
 
-### NDSLabs Spec
-The **spec** is our way of telling NDSLabs what an image needs in order to run.
+### NDS Labs Spec
+The **spec** is our way of telling NDS Labs what an image needs in order to run.
 
 Listed below are all possible fields of a spec (NOTE: you do **not** need to define sections that you do not plan to use):
 ```js
@@ -114,15 +114,15 @@ Listed below are all possible fields of a spec (NOTE: you do **not** need to def
 }
 ```
 
-#### Loading a Custom Spec into NDSLabs
-Run the following command to log into the NDSLabs CLI as admin:
+#### Loading a Custom Spec into NDS Labs
+Run the following command to log into the NDS Labs CLI as admin:
 ```bash
 ndslabsctl login admin
 ```
 
 NOTE: The default admin password is "admin"
 
-Then, run the following command to load this custom spec into NDSLabs:
+Then, run the following command to load this custom spec into NDS Labs:
 ```bash
 ndslabsctl add service -f spec.json
 ```
@@ -136,7 +136,7 @@ git clone https://github.com/nds-org/developer-tutorial.git
 ```
 
 #### 1.) Cowsay
-An extremely simple example to demonstrate authoring an NDSLabs service spec.
+An extremely simple example to demonstrate authoring an NDS Labs service spec.
 
 View the **cowsay/** folder for more information.
 
@@ -146,6 +146,6 @@ A slightly more complicated example, Cloud9 introduces the notion of "volumes" a
 View the **cloud9/** folder for more information.
 
 #### 3.) OwnCloud
-This example mimics that of an actual stack that might be included in NDSLabs.
+This example mimics that of an actual stack that might be included in NDS Labs.
 
 View the **owncloud/** folder for more information.
