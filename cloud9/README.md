@@ -1,9 +1,9 @@
-# NDSLabs Example: Cloud9 IDE
+# Example 2: Cloud9 IDE
+
+Now let's try a slightly more complex example: **ndslabs/cloud9**.
 
 ## Docker Image
 The first thing you will need is a docker image. You can find plenty of images on hub.docker.com.
-
-Let's use a very simple example to start: **ndslabs/cloud9**.
 
 You can build this image yourself from source by executing the following command:
 ```bash

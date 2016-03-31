@@ -1,4 +1,4 @@
-# NDSLabs Cowsay Example
+# Example 1: Cowsay
 
 ## Docker Image
 The first thing you will need is a docker image. You can find plenty of images on hub.docker.com.
