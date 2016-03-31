@@ -1,5 +1,6 @@
 # NDS Labs Developer Tutorial
-This repository contains several tutorials describing how to create custom [specs](https://github.com/nds-org/ndslabs-specs) for adding your own stacks and services to [NDS Labs](https://github.com/nds-org/ndslabs).
+This repository contains several tutorials describing how to create custom [service specs](https://github.com/nds-org/ndslabs-specs).
+This allows you to import new stacks and services to be launched from [NDS Labs](https://github.com/nds-org/ndslabs).
 
 ## NDS Labs Setup
 There are a few automated steps involved in setting up your own instance of NDS Labs.
