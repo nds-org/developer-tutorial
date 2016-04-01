@@ -1,17 +1,17 @@
 {
-    "key": "owncloud",
-    "label": "ownCloud",
-    "image": "craigwillis/owncloud:latest",
-    "description": "A self-hosted file sync and share server",
-    "access": "external",
-    "display": "stack",
-    "depends": [
-      { "key": "mysql", "required": false }
-    ],
-    "ports": [
-        { "port": 80, "protocol": "http" }
-    ],
-    "volumeMounts": [
-      { "name": "owncloud", "mountPath": "/var/www/owncloud" }
-    ]
+  "key": "owncloud",
+  "label": "ownCloud",
+  "image": "craigwillis/owncloud:latest",
+  "description": "A self-hosted file sync and share server",
+  "access": "external",
+  "display": "stack",
+  "depends": [
+    { "key": "mysql", "required": false }    
+  ],
+  "ports": [
+    { "port": 80, "protocol": "http" }
+  ],
+  "volumeMounts": [
+    { "name": "owncloud", "mountPath": "/var/www/owncloud" }
+  ]
 }
