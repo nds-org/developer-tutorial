@@ -125,19 +125,14 @@ Listed below are all possible fields of a spec (NOTE: you do **not** need to def
 ```
 
 #### Loading a Custom Spec into NDS Labs
-Run the following command to log into the NDS Labs CLI as admin:
-```bash
-ndslabsctl login admin
-```
-
-NOTE: The default admin password is "admin"
-
-Then, run the following command to load this custom spec into NDS Labs:
+Now, run the following command to load this custom spec into NDS Labs:
 ```bash
 ndslabsctl add service -f spec.json
 ```
 
-Now reloading the UI should show your new service(s) listed and ready to add!
+You will be prompted for the admin password (default is "admin") in order to add a service.
+
+Reloading the UI should show your new service(s) listed and ready to add!
 
 ### Examples
 Obtain a local copy of this tutorial by running
