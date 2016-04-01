@@ -97,4 +97,4 @@ Try it for yourself:
 5. A new tab will open, where you will be able to taken to the Cloud9 IDE interface, where should see your workspace exactly as you left it.
 
 ## Next Steps
-Now that you have seen volumes, let's move to a realistic example of a service to add: [ownCloud](https://github.com/nds-org/developer-tutorial/tree/master/owncloud).
+Now that you have been introduced to persisted volumes and how to define them in a spec, let's move to a realistic example of a service to add: [ownCloud](https://github.com/nds-org/developer-tutorial/tree/master/owncloud).
