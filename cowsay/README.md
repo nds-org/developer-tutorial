@@ -58,7 +58,7 @@ Now that we have our cowsay spec loaded, let's try to create an instance of it i
 0. If you're not already running your own instance of NDS Labs, check out our [Setup Documentation](https://github.com/nds-org/ndslabs/blob/master/docs/setup.md).
 1. Navigate your browser to `http://YOUR_IP:30000` and log in. 
 2. You should now see "Cowsay" listed with the other services.
-3. Click **+** next to "Cowsay" and step through the wizard:
+3. Click **+** next to "Cowsay" and step through the wizard to configure Cowsay:
   * Choose a name your stack appropriately and click **Next**.
   * Confirm that your stack looks correct and click **Confirm**
   * You will see your new "Cowsay" stack appear in the **Stacks** tab of the UI
