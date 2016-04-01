@@ -1,8 +1,10 @@
 # Example 1: Cowsay
 
-Let's use a very simple example to start: **cowsay-php**. In this example, you will be introduced to the basics of Docker
+Let's use a very simple example to start: **cowsay-php**.
 
-## New to Docker?
+In this example you will be introduced to the basics of Docker, including building and pushing images to be reused by others, as well as the NDS Labs service specification which tells NDS Labs how to run the image.
+
+## Docker Basics
 Start learning Docker with the [official Getting Started guide](https://docs.docker.com/linux/)!
 
 ## Docker Image
@@ -23,7 +25,9 @@ docker push USERNAME/cowsay-php
 ```
 
 ## NDS Labs Spec
-Now that we have a Docker image for our service, we need to wrap it in a spec:
+Now that we have a Docker image for our service, we need to tell NDS Labs how to run this image.
+
+For this, we will need to wrap it in a [JSON service spec](https://opensource.ncsa.illinois.edu/confluence/display/NDS/NDS+Labs+Service+Specification), like the one below:
 ```js
 {
     "key": "cowsay",
