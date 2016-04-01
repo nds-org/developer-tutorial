@@ -81,3 +81,10 @@ Now that we have our cowsay spec loaded, let's try to create an instance of it i
   * NOTE: this may take several minutes the first time, as Docker will pull the image before running it. 
 7. Once the stack has started, navigate to its endpoint by click the link to the right of the service name.
 8. A new tab will open, where you will be able to admire your cow in all its majesty
+
+## Next Steps
+You might notice that this simple example contains only static data, and nothing that would require long-term storage.
+
+But what happens when we want to save this data between container restarts?
+
+Now that you've gotten your hands dirty, let's move to a slightly more complex example where you will be introduced to persisted volumes: [the Cloud9 IDE](https://github.com/nds-org/developer-tutorial/tree/master/cloud9).
