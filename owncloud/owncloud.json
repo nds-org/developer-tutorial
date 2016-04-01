@@ -1,7 +1,7 @@
 {
     "key": "owncloud",
     "label": "ownCloud",
-    "image": "owncloud:latest",
+    "image": "craigwillis/owncloud:latest",
     "description": "A self-hosted file sync and share server",
     "access": "external",
     "display": "stack",

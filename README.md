@@ -21,7 +21,7 @@ kube-up.sh
 ### Start NDS Labs
 Still inside of system-shell, run the following command to start running NDS Labs:
 ```bash
-nds-labs-up.sh
+ndslabs-up.sh
 ``` 
 
 #### Clowder Tool Server (Optional)
