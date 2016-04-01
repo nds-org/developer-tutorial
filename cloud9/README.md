@@ -95,3 +95,6 @@ Try it for yourself:
 3. Once it has fully shut down, start the cloud9 stack up once again.
 4. Once the stack has restarted, navigate to its endpoint by click the link to the right of the service name.
 5. A new tab will open, where you will be able to taken to the Cloud9 IDE interface, where should see your workspace exactly as you left it.
+
+## Next Steps
+Now that you have seen volumes, let's move to a realistic example of a service to add: [ownCloud](https://github.com/nds-org/developer-tutorial/tree/master/owncloud).
