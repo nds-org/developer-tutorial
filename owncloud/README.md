@@ -68,9 +68,9 @@ The following spec defines how NDS Labs will use the "owncloud" image:
 NOTE: If you don't have a USERNAME from [Docker Hub](hub.docker.com), simply use **ndslabs** in place of **USERNAME** above to pull down and run our pre-built example image.
 
 ### Dependencies
-You might have noticed the "depends" section in the spec above: this defines a **service dependency**.
+You might have noticed the **depends** section in the spec above: this defines a "service dependency".
 
-Dependencies can be either required or optional.
+Dependencies can be either **required** or optional.
 
 The following spec defines how NDS Labs will use the optional "mysql" dependency:
 ```js
