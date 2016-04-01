@@ -51,9 +51,14 @@ For this, we will need to wrap it in a [JSON service spec](https://opensource.nc
 }
 ```
 
+NOTE: If you don't have a USERNAME from [Docker Hub](hub.docker.com), simply use **ndslabs** in place of **USERNAME** above to pull down and run our pre-built example image.
+
+### Volume Mounts
 The above spec defines how NDSLabs will use the "cloud9" image that we built above.
 
-NOTE: If you don't have a USERNAME from [Docker Hub](hub.docker.com), simply use **ndslabs** in place of **USERNAME** above to pull down and run our pre-built example image.
+The **volumeMounts** field tells us the path of any data that we would want to retain between restarts.
+
+NOTE: **mountPath** must be an absolute path.
 
 ### Loading Cloud9 into NDS Labs
 Run the following command from the system-shell to load this custom spec into NDS Labs:
@@ -71,7 +76,7 @@ Now that we have our cloud9 spec loaded, let's try to create an instance of it i
 0. If you're not already running your own instance of NDS Labs, check out our [Setup Documentation](https://github.com/nds-org/ndslabs/blob/master/docs/setup.md).
 1. Navigate your browser to `http://YOUR_IP:30000` and log in. 
 2. You should now see "Cloud9 IDE" listed with the other services.
-3. Click **+** next to "Cloud9 IDE" and step through the wizard to configure Cloud9:
+3. Click **+** beside "Cloud9 IDE" and step through the wizard to configure Cloud9:
   * Choose a name your stack appropriately and click **Next**.
   * Choose a size to use for the volume that will attach to this service.
     * You will be asked to reuse any detached volumes for this service, if any such volumes exist.
@@ -84,7 +89,7 @@ Now that we have our cloud9 spec loaded, let's try to create an instance of it i
 7. Once the stack has started, navigate to its endpoint by click the link to the right of the service name.
 8. A new tab will open, where you will be able to taken to the Cloud9 IDE interface, where you will be able to create and edit any files that exist on the volume that we defined above.
 
-#### Persisted Volumes
+#### Testing Persisted Volumes
 You can use the console at the bottom of the editor to execute Git commands, allowing you to clone source repositories, modify them, and commit/push your changes back. Although your workspace will be initially empty, you can create new files and edit them as you see fit. These new files will be saved across container restarts.
 
 Try it for yourself:
