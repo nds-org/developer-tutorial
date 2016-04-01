@@ -24,7 +24,7 @@ Never heard of Docker? Start [here](https://docs.docker.com/linux/)!
 #### Authoring a Dockerfile
 Can't find an existing image for your service? You may need to create a Dockerfile describing how to build an image of the desired code.
 
-Never built a Docker image? Try the [Cowsay](https://github.com/nds-org/developer-tutorial/blob/master/README.md#1-cowsay) example below.
+Never built a Docker image? Try the Cowsay [example](https://github.com/nds-org/developer-tutorial/blob/master/README.md#examples) below.
 
 More information regarding best practices for authoring a Dockerfile can be found [here](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/).
 
