@@ -14,9 +14,14 @@ In order to load a custom service into NDS Labs, only two things are needed:
 * A [JSON spec](https://opensource.ncsa.illinois.edu/confluence/display/NDS/NDS+Labs+Service+Specification) describing the Image
 
 ### Docker Image
-The first thing you will need is a docker image.
+The first thing you will need is a Docker image.
 
-You can find plenty of images on hub.docker.com, including all Docker images used in NDS Labs.
+You can find plenty of images on [Docker Hub](hub.docker.com), including all images used in NDS Labs.
+
+#### New to Docker?
+Never heard of Docker? Start [here](https://docs.docker.com/linux/)! 
+
+Never built a Docker image? Try the https://github.com/nds-org/developer-tutorial/blob/master/README.md#1-cowsay example below.
 
 #### Authoring a Dockerfile
 Can't find an existing image for your service?
