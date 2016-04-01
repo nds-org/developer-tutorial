@@ -37,7 +37,7 @@ Now that we have a Docker image for our service, we need to wrap it in a spec:
 
 The above spec defines how NDS Labs will use the "cowsay-php" image that we built above.
 
-NOTE: If you don't have a USERNAME from [Docker Hub](hub.docker.com), simply use **ndslabs** in place of the USERNAME above.
+NOTE: If you don't have a USERNAME from [Docker Hub](hub.docker.com), simply use **ndslabs** in place of **USERNAME** above to pull down and run our pre-built example image.
 
 ### Loading Cowsay into NDS Labs
 Run the following command to log into the NDS Labs CLI as admin:
