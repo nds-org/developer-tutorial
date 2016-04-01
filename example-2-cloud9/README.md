@@ -1,6 +1,6 @@
 # Example 2: [Cloud9 IDE](https://c9.io/)
 
-In the [Cowsay example](https://github.com/nds-org/developer-tutorial/tree/master/cowsay), we learned how to use Docker, and authored our first custom service spec. Now let's try a slightly more complex example: **cloud9**.
+In the [Cowsay example](https://github.com/nds-org/developer-tutorial/tree/master/example-1-cowsay), we learned how to use Docker, and authored our first custom service spec. Now let's try a slightly more complex example: **cloud9**.
 
 In this example you will be introduced to the concept of "persisted volumes" and how to preserve data between Docker container restarts.
 
@@ -54,7 +54,7 @@ For this, we will need to wrap it in a [JSON service spec](https://opensource.nc
 NOTE: If you don't have a USERNAME from [Docker Hub](hub.docker.com), simply use **ndslabs** in place of **USERNAME** above to pull down and run our pre-built example image.
 
 ### Volume Mounts
-The above spec defines how NDSLabs will use the "cloud9" image that we built above.
+The above spec defines how NDS Labs will use the "cloud9" image that we built above.
 
 The **volumeMounts** field tells us the path of any data that we would want to retain between restarts.
 
@@ -100,4 +100,4 @@ Try it for yourself:
 5. A new tab will open, where you will be able to taken to the Cloud9 IDE interface, where should see your workspace exactly as you left it.
 
 ## Next Steps
-Now that you have been introduced to persisted volumes and how to define them in a spec, let's move to a realistic example of a service to add: [ownCloud](https://github.com/nds-org/developer-tutorial/tree/master/owncloud).
+Now that you have been introduced to persisted volumes and how to define them in a spec, let's move to a realistic example of a service to add: [ownCloud](https://github.com/nds-org/developer-tutorial/tree/master/example-3-owncloud).

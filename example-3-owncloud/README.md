@@ -1,6 +1,6 @@
 # Example 3: [ownCloud](https://owncloud.org/) + [MySQL](https://www.mysql.com/)
 
-In the [Cloud9 example](https://github.com/nds-org/developer-tutorial/tree/master/cloud9), we learned how to define persisted volumes in the NDS Labs service spec. Now let's try a realistic example using some services we would like to eventually see in NDS Labs: **owncloud** and **mysql**.
+In the [Cloud9 example](https://github.com/nds-org/developer-tutorial/tree/master/example-2-cloud9), we learned how to define persisted volumes in the NDS Labs service spec. Now let's try a realistic example using some services we would like to eventually see in NDS Labs: **owncloud** and **mysql**.
 
 In this example we will introduce specifying dependencies between services, and how to define environment variables to handle custom configuration.
 

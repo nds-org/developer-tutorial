@@ -87,4 +87,4 @@ You might notice that this simple example contains only static data, and nothing
 
 But what happens when we want to save this data between container restarts?
 
-Now that you've gotten your hands dirty, let's move to a slightly more complex example where you will be introduced to persisted volumes: [the Cloud9 IDE](https://github.com/nds-org/developer-tutorial/tree/master/cloud9).
+Now that you've gotten your hands dirty, let's move to a slightly more complex example where you will be introduced to persisted volumes: [the Cloud9 IDE](https://github.com/nds-org/developer-tutorial/tree/master/example-2-cloud9).
