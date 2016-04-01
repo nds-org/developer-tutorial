@@ -10,8 +10,8 @@ To set up your own instance of NDS Labs, see [NDS Labs: setup.md](https://github
 Now that you have your own instance of NDS Labs running, its time to customize it!
 
 In order to load a custom service into NDS Labs, only two things are needed:
-* A Docker Image
-* A JSON spec describing the Docker Image
+* A [Docker](https://docs.docker.com/linux/) Image
+* A [JSON spec](https://opensource.ncsa.illinois.edu/confluence/display/NDS/NDS+Labs+Service+Specification) describing the Image
 
 ### Docker Image
 The first thing you will need is a docker image.
@@ -109,7 +109,8 @@ Reloading the UI should show your new service(s) listed and ready to add!
 ### Examples
 Obtain a local copy of this tutorial by running
 ```bash
-git clone https://github.com/nds-org/developer-tutorial.git
+git clone https://github.com/nds-org/developer-tutorial.git /usr/local/lib/tutorial
+cd /usr/local/lib/tutorial
 ```
 
 #### 1.) Cowsay
