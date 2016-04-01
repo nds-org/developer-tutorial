@@ -124,7 +124,7 @@ Now that we have our owncloud spec loaded, let's try to create an instance of it
 0. If you're not already running your own instance of NDS Labs, check out our [Setup Documentation](https://github.com/nds-org/ndslabs/blob/master/docs/setup.md).
 1. Navigate your browser to `http://YOUR_IP:30000` (create a project if necessary) and log in. 
 2. You should now see "ownCloud" listed with the other services.
-3. Click **+** beside "ownCloud" and step through the wizard to configure ownCloud:
+3. Click the **+** button beside "ownCloud" and step through the wizard to configure ownCloud:
   * Choose a name your stack appropriately and click **Next**.
   * You will be given the option to select MySQL, but do not select it just yet.
   * Choose a size to use for the volume that will attach to this service.
@@ -145,7 +145,7 @@ We've tested our ownCloud spec, but what about the MySQL integration?
 0. If you're not already running your own instance of NDS Labs, check out our [Setup Documentation](https://github.com/nds-org/ndslabs/blob/master/docs/setup.md).
 1. Navigate your browser to `http://YOUR_IP:30000` (create a project if necessary) and log in. 
 2. You should now see "ownCloud" listed with the other services.
-3. Click **+** beside "ownCloud" and step through the wizard to configure ownCloud:
+3. Click the **+** button beside "ownCloud" and step through the wizard to configure ownCloud:
   * Choose a name your stack appropriately and click **Next**.
   * Select MySQL as an optional service.
   * Choose a size to use for the volumes that will attach to these services.
