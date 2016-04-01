@@ -66,5 +66,5 @@ Now that we have our cowsay spec loaded, let's try to create an instance of it i
 5. Click the "Launch Stack" button at the bottom-right of the pane.
 6. Wait for the stack to start.
   * NOTE: this may take several minutes the first time, as Docker will pull the image before running it. 
-7. Once the stack has started, navigate to its endpoint by click the &#xf08e; icon next to the service name.
+7. Once the stack has started, navigate to its endpoint by click the  icon next to the service name.
 8. A new tab will open, where you will be able to admire your cow in all its majesty
