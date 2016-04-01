@@ -76,7 +76,7 @@ Now that we have our cloud9 spec loaded, let's try to create an instance of it i
 0. If you're not already running your own instance of NDS Labs, check out our [Setup Documentation](https://github.com/nds-org/ndslabs/blob/master/docs/setup.md).
 1. Navigate your browser to `http://YOUR_IP:30000` and log in. 
 2. You should now see "Cloud9 IDE" listed with the other services.
-3. Click **+** beside "Cloud9 IDE" and step through the wizard to configure Cloud9:
+3. Click the **+** button beside "Cloud9 IDE" and step through the wizard to configure Cloud9:
   * Choose a name your stack appropriately and click **Next**.
   * Choose a size to use for the volume that will attach to this service.
     * You will be asked to reuse any detached volumes for this service, if any such volumes exist.
