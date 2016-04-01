@@ -7,8 +7,6 @@ In this example you will be introduced to the concept of "persisted volumes" and
 Normally, when a Docker container restarts, any changes to that container's file system are discarded. But what if we want to preserve some data in the container? A good example of this is a database container, which would be fairly useless if it did retain the data during a container restart.
 
 ## Docker Image
-The first thing you will need is a docker image. You can find plenty of images on [Docker Hub](hub.docker.com), but we've provided the most simple of examples to illustrate the process of building an image from a Dockerfile.
-
 You can build the **cloud9** image yourself from source by executing the following command:
 ```bash
 docker build -t cloud9 .
