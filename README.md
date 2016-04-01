@@ -19,7 +19,7 @@ The first thing you will need is a Docker image.
 You can find plenty of images on [Docker Hub](hub.docker.com), including all images used in NDS Labs.
 
 #### New to Docker?
-Never heard of Docker? Start [here](https://docs.docker.com/linux/)! 
+Start learning Docker in their [official Getting Started guide](https://docs.docker.com/linux/)! 
 
 #### Authoring a Dockerfile
 Can't find an existing image for your service? You may need to create a Dockerfile describing how to build an image of the desired code.
