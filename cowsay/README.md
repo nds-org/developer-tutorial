@@ -1,4 +1,4 @@
-# Example 1: Cowsay
+# Example 1: [Cowsay](https://en.wikipedia.org/wiki/Cowsay)
 
 Let's use a very simple example to start: **cowsay-php**.
 
