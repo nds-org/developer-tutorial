@@ -1,6 +1,6 @@
-# Example 2: Cloud9 IDE
+# Example 2: [Cloud9 IDE](https://c9.io/)
 
-In the [Cowsay example](https://github.com/nds-org/developer-tutorial/tree/master/cowsay), we learned how to use Docker, and authored our first custom service spec. Now let's try a slightly more complex example: **ndslabs/cloud9**.
+In the [Cowsay example](https://github.com/nds-org/developer-tutorial/tree/master/cowsay), we learned how to use Docker, and authored our first custom service spec. Now let's try a slightly more complex example: **cloud9**.
 
 In this example you will be introduced to the concept of "persisted volumes" and how to preserve data between Docker container restarts.
 
