@@ -15,6 +15,13 @@ You can build the **cowsay-php** image yourself from source by executing the fol
 docker build -t cowsay-php .
 ```
 
+Once the build is complete, running `docker images` should show your newly built image:
+```bash
+$ docker images
+REPOSITORY                                 TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+cowsay-php                                 latest              bf5dbf5675ef        46 hours ago        534.9 MB
+```
+
 ### Pushing to Docker Hub
 If you have created a [Docker Hub](hub.docker.com) account, you can push this image up there for NDS Labs to pull down.
 
@@ -23,6 +30,8 @@ docker tag cowsay-php USERNAME/cowsay-php
 docker login
 docker push USERNAME/cowsay-php
 ```
+
+**NOTE:** If you have already successfully executed `docker login` on this machine, you will not need to log in again.
 
 ## NDS Labs Spec
 Now that we have a Docker image for our service, we need to tell NDS Labs how to run this image.
