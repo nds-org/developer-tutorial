@@ -5,9 +5,6 @@
     "description": "A self-hosted file sync and share server",
     "access": "external",
     "display": "stack",
-    "depends": [
-      { "key": "mysql", "required": false }
-    ],
     "ports": [
         { "port": 80, "protocol": "http" }
     ],
