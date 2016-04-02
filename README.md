@@ -4,48 +4,23 @@ This repository contains several tutorials describing how to create custom [serv
 This allows you to import new stacks and services to be launched from [NDS Labs](https://github.com/nds-org/ndslabs).
 
 ## NDS Labs Setup
-To set up your own instance of NDS Labs, see [Setup Documentation](https://github.com/nds-org/ndslabs/blob/master/docs/setup.md).
+To set up your own instance of NDS Labs, see the [Setup Documentation](https://github.com/nds-org/ndslabs/blob/master/docs/setup.md).
 
 ## Customizing NDS Labs
 Now that you have your own instance of NDS Labs running, its time to customize it!
 
 In order to load a custom service into NDS Labs, only two things are needed:
-* A [Docker](https://docs.docker.com/linux/) Image
-* A [JSON spec](https://opensource.ncsa.illinois.edu/confluence/display/NDS/NDS+Labs+Service+Specification) describing the Image
+* A [Docker](https://docs.docker.com/linux/) image
+* A [JSON spec](https://opensource.ncsa.illinois.edu/confluence/display/NDS/NDS+Labs+Service+Specification) describing the image
 
-### Docker Image
-The first thing you will need is a Docker image.
+### Docker Images
 
-You can find plenty of images on [Docker Hub](hub.docker.com), including all images used in NDS Labs.
+The first thing you will need is a Docker image. You can find plenty of images on [Docker Hub](hub.docker.com), including all images used in [NDS Labs](http://hub.docker.com/r/ndslabs).
 
-#### New to Docker?
-Start learning Docker with the [official Getting Started guide](https://docs.docker.com/linux/)! 
+New to Docker? Start learning Docker with our [Docker 101](https://github.com/nds-org/developer-tutorial/blob/master/docker-101/README.md) tutorial.
 
-#### Authoring a Dockerfile
-Can't find an existing image for your service? You may need to create a Dockerfile describing how to build an image of the desired code.
+### NDS Labs service specifications
 
-Never built a Docker image? Try the Cowsay [example](https://github.com/nds-org/developer-tutorial/blob/master/README.md#examples) below.
-
-More information regarding best practices for authoring a Dockerfile can be found [here](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/).
-
-#### Building an Image
-Once you have a Dockerfile for an image, you can build an image yourself by executing the following command:
-```bash
-docker build -t [REPOSITORY/]IMAGE[:VERSION] .
-```
-
-#### Sharing Your Images
-If you have an account on Docker Hub, you can push this image to make it available to NDS Labs and others to reuse.
-
-```bash
-docker tag IMAGE USERNAME/IMAGE[:VERSION]
-docker login
-docker push USERNAME/IMAGE[:VERSION]
-```
-
-NOTE: If VERSION is not specified, "latest" is assumed.
-
-### NDS Labs Spec
 A [service spec](https://github.com/nds-org/ndslabs-specs) is our way of telling NDS Labs what an image needs in order to run.
 
 Several examples are included to walk you through what's involved in creating a spec.
@@ -61,6 +36,7 @@ You will be prompted for the admin password (default: "admin") in order to add a
 Reloading the UI should show your new service(s) listed and ready to add from the left-side pane.
 
 ### Examples
+
 Obtain a local copy of this tutorial by running
 ```bash
 git clone https://github.com/nds-org/developer-tutorial.git /usr/local/lib/tutorial
