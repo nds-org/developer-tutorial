@@ -19,31 +19,9 @@ The first thing you will need is a Docker image.
 You can find plenty of images on [Docker Hub](hub.docker.com), including all images used in NDS Labs.
 
 #### New to Docker?
-Start learning Docker with the [official Getting Started guide](https://docs.docker.com/linux/)! 
 
-#### Authoring a Dockerfile
-Can't find an existing image for your service? You may need to create a Dockerfile describing how to build an image of the desired code.
+Start learning Docker with our [Docker 101](https://github.com/nds-org/developer-tutorial/blob/master/docker-101/README.md) tutorial.
 
-Never built a Docker image? Try the Cowsay [example](https://github.com/nds-org/developer-tutorial/blob/master/README.md#examples) below.
-
-More information regarding best practices for authoring a Dockerfile can be found [here](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/).
-
-#### Building an Image
-Once you have a Dockerfile for an image, you can build an image yourself by executing the following command:
-```bash
-docker build -t [REPOSITORY/]IMAGE[:VERSION] .
-```
-
-#### Sharing Your Images
-If you have an account on Docker Hub, you can push this image to make it available to NDS Labs and others to reuse.
-
-```bash
-docker tag IMAGE USERNAME/IMAGE[:VERSION]
-docker login
-docker push USERNAME/IMAGE[:VERSION]
-```
-
-NOTE: If VERSION is not specified, "latest" is assumed.
 
 ### NDS Labs Spec
 A [service spec](https://github.com/nds-org/ndslabs-specs) is our way of telling NDS Labs what an image needs in order to run.
