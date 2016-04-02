@@ -11,7 +11,7 @@ This is based on the excellent [Kubernetes 101](http://kubernetes.io/docs/user-g
 
 # Starting Kubernetes
 
-You'll first need to start your local Kubernetes services using the kube-up.sh provided in the (NDS Labs system shell)[https://github.com/nds-org/ndslabs/blob/master/docs/setup.md].
+You'll first need to start your local Kubernetes services using the kube-up.sh provided in the [NDS Labs system shell](https://github.com/nds-org/ndslabs/blob/master/docs/setup.md).
 
 
 # Creating a Pod
