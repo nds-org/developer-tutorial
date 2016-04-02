@@ -94,6 +94,20 @@ ndslabs/cowsay      latest              7f30ada4c040        35 minutes ago      
 
 The CMD instruction specifies only the default command. You can run any other command -- as long as it's installed in the container:
 
+For example:
+```
+docker run --rm ndslabs/cowsay cowsay Hello
+ _______
+< Hello >
+ -------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+```
+
+Or even:
 ```
 docker run --rm ndslabs/cowsay ls /usr/games
 cowsay
@@ -108,7 +122,7 @@ Sometimes you might want to connect or "shell" into a running container.
 docker run --rm -it ndslabs/cowsay sh
 ```
 
-This starts an interactive shell.  You can now run commands, install packages, edit files, etc.  Remember -- since the container was started with "--rm", when you exit your changes will be lost!
+This starts an interactive shell.  You can now run commands, install packages, edit files, etc.  But remember -- since the container was started with "--rm", when you exit your changes will be lost!
 
 ## Committing changes
 
