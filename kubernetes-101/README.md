@@ -1,20 +1,20 @@
-## Kubernetes 101
+# Kubernetes 101
 
 This is based on the excellent [Kubernetes 101](http://kubernetes.io/docs/user-guide/walkthrough/) tutorial.
  
-# What you'll learn
+## What you'll learn
 * How to use kubectl
 * How to create Pods, Replication Controllers and Services
  
-# What you'll need
+## What you'll need
 * NDS Labs system shell
 
-# Starting Kubernetes
+## Starting Kubernetes
 
 You'll first need to start your local Kubernetes services using the kube-up.sh provided in the [NDS Labs system shell](https://github.com/nds-org/ndslabs/blob/master/docs/setup.md).
 
 
-# Creating a Pod
+## Creating a Pod
 
 In this first example, you'll create a simple Kubernetes Pod specification. 
 
@@ -81,7 +81,7 @@ kubectl get pods
 
 You should no longer see the nginx Pod.
 
-# Creating a Replication Controller
+## Creating a Replication Controller
 
 You would rarely run a Pod alone. One of Kubernete's strengths is it's ability to keep containers up and running seamlessly. So now we'll move our Pod specification into a replication controller.
 
@@ -166,7 +166,7 @@ kubectl get pod nginx-rc-q0aki --template {{.status.podIP}}
 172.17.0.10
 ```
 
-# Starting a service
+## Starting a service
 
 The central purpose of Kubernetes is to manage containers in a cluster environment. This includes scheduling resources, scaling, and load-balancing.  Pods and their associated containers may be moved to different nodes in a cluster for a variety of reasons. Services are provided as a stable interface to these ephemeral pods.
 
@@ -220,7 +220,7 @@ kubectl delete svc nginx-service
 kubectl delete rc nginx-rc
 ```
 
-# Next steps
+## Next steps
 
 This has been a very brief introduction to Kubernetes.  For more information, see the Kubernetes 101 and 201 tutorials:
 * http://kubernetes.io/docs/user-guide/walkthrough/k8s101/
