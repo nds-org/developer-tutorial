@@ -3,7 +3,9 @@
 This is based on the excellent [Kubernetes 101](http://kubernetes.io/docs/user-guide/walkthrough/) tutorial.
  
 # What you'll learn
-
+* How to use kubectl
+* How to create Pods, Replication Controllers and Services
+ 
 # What you'll need
 * NDS Labs system shell
 
