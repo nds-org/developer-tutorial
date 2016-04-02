@@ -230,12 +230,23 @@ docker run --rm fortunecow
 
 ## Sharing your images
 
-To share your images, you'll need access to a repository such as Dockerhub (http://hub.docker.com).  You can easily push your images by:
+If you have an account on Docker Hub, you can push this image to make it available to NDS Labs and others to reuse.
+
+```
+docker tag IMAGE USERNAME/IMAGE[:VERSION]
+docker login
+docker push USERNAME/IMAGE[:VERSION]
+```
+
+NOTE: If VERSION is not specified, "latest" is assumed.
+
+For example:
 
 ```
 docker tag fortunecow <user>/fortunecow
 docker push <user>/fortunecow
 ```
+
 
 ## Next steps
 
