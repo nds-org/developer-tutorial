@@ -4,22 +4,23 @@ This repository contains several tutorials describing how to create custom [serv
 This allows you to import new stacks and services to be launched from [NDS Labs](https://github.com/nds-org/ndslabs).
 
 ## NDS Labs Setup
-To set up your own instance of NDS Labs, see [Setup Documentation](https://github.com/nds-org/ndslabs/blob/master/docs/setup.md).
+To set up your own instance of NDS Labs, see the [Setup Documentation](https://github.com/nds-org/ndslabs/blob/master/docs/setup.md).
 
 ## Customizing NDS Labs
 Now that you have your own instance of NDS Labs running, its time to customize it!
 
 In order to load a custom service into NDS Labs, only two things are needed:
-* A [Docker](https://docs.docker.com/linux/) Image
-* A [JSON spec](https://opensource.ncsa.illinois.edu/confluence/display/NDS/NDS+Labs+Service+Specification) describing the Image
+* A [Docker](https://docs.docker.com/linux/) image
+* A [JSON spec](https://opensource.ncsa.illinois.edu/confluence/display/NDS/NDS+Labs+Service+Specification) describing the image
 
 ### Docker Images
 
-The first thing you will need is a Docker image. You can find plenty of images on [Docker Hub](hub.docker.com), including all images used in NDS Labs.
+The first thing you will need is a Docker image. You can find plenty of images on [Docker Hub](hub.docker.com), including all images used in [NDS Labs](http://hub.docker.com/r/ndslabs).
 
 New to Docker? Start learning Docker with our [Docker 101](https://github.com/nds-org/developer-tutorial/blob/master/docker-101/README.md) tutorial.
 
-### NDS Labs Spec
+### NDS Labs service specifications
+
 A [service spec](https://github.com/nds-org/ndslabs-specs) is our way of telling NDS Labs what an image needs in order to run.
 
 Several examples are included to walk you through what's involved in creating a spec.
@@ -35,6 +36,7 @@ You will be prompted for the admin password (default: "admin") in order to add a
 Reloading the UI should show your new service(s) listed and ready to add from the left-side pane.
 
 ### Examples
+
 Obtain a local copy of this tutorial by running
 ```bash
 git clone https://github.com/nds-org/developer-tutorial.git /usr/local/lib/tutorial
