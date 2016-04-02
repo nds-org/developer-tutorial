@@ -110,4 +110,119 @@ docker run --rm -it ndslabs/cowsay sh
 
 This starts an interactive shell.  You can now run commands, install packages, edit files, etc.  Remember -- since the container was started with "--rm", when you exit your changes will be lost!
 
-## Stopping, Removing, and Attaching
+## Committing changes
+
+It is possible to change the contents of a container and commit those changes to an image.  In this case, we do not want to use the "--rm" flag:
+
+```
+docker run -it ndslabs/cowsay sh
+```
+
+Once in the interactive shell, you can install additional packages:
+```
+apt-get install -y fortunes
+```
+
+Running the new command, you should see something like:
+```
+fortune
+
+This bag is recyclable.
+```
+
+Exit out of the shell and use "docker ps -a" to find the container:
+```
+docker ps -a 
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                     PORTS               NAMES
+f31a89705ee2        ndslabs/cowsay      "sh"                56 seconds ago      Exited (0) 6 seconds ago                       cranky_almeida
+```
+
+You can commit your changes using "docker commit <CONTAINER ID>"
+```
+docker commit f31a89705ee2
+```
+
+This will create a new image:
+```
+docker images
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+<none>              <none>              09e96c21ffa1        12 seconds ago      175.9 MB
+ndslabs/cowsay      latest              7f30ada4c040        42 minutes ago      170.9 MB
+```
+
+You'll want to tag the image for future use:
+```
+docker tag 09e96c21ffa1 myfortune
+```
+
+And you can now run a container based on your new image:
+```
+docker run --rm myfortune fortune
+
+Tell me what to think!!!
+```
+
+## Creating a Dockerfile
+
+Another way to change an image is to create a new Dockerfile. In this example, we'll combine our efforts above.
+
+On your local system, create a new file called Dockerfile:
+
+```
+FROM debian:jessie
+
+RUN apt-get update -y && apt-get install -y fortune cowsay
+
+ENV PATH $PATH:/usr/games
+
+CMD fortune -a | cowsay
+```
+
+We'll add the fortune package and change the default command
+
+## Building the image
+
+Once you have a Dockerfile, you can build a local image:
+```
+docker build -t fortunecow .
+```
+
+There's too much output to post here, but you should see the 4 steps in the Dockerfile.  You can see the resulting image by:
+
+```
+docker images
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+fortunecow          latest              3ac3a1461552        19 seconds ago      172.9 MB
+fortune             latest              09e96c21ffa1        5 minutes ago       175.9 MB
+ndslabs/cowsay      latest              7f30ada4c040        48 minutes ago      170.9 MB
+```
+
+And you can run a container based on the new image:
+```
+docker run --rm fortunecow
+ ______________________________________
+< Today is what happened to yesterday. >
+ --------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+```
+
+
+## Sharing your images
+
+To share your images, you'll need access to a repository such as Dockerhub (http://hub.docker.com).  You can easily push your images by:
+
+```
+docker tag fortunecow <user>/fortunecow
+docker push <user>/fortunecow
+```
+
+## Next steps
+
+Those are just the basics.  See the Docker tutorials and "docker --help" for more information.
