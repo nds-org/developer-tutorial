@@ -204,7 +204,7 @@ service "nginx-service" created
 List available services:
 ```
 kubetl get svc
-```
+
 NAME            CLUSTER-IP   EXTERNAL-IP   PORT(S)    AGE
 nginx-service   10.0.0.32    <none>        8000/TCP   18s
 ```
