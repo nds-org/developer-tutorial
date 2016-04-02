@@ -5,7 +5,7 @@ Let's use a very simple example to start: **cowsay-php**.
 In this example you will be introduced to the basics of Docker, including building and pushing images to be reused by others, as well as the NDS Labs service specification which tells NDS Labs how to run the image.
 
 ## Docker Basics
-Start learning Docker with the [official Getting Started guide](https://docs.docker.com/linux/)!
+Start learning Docker with our [Docker 101](https://github.com/craig-willis/developer-tutorial/tree/master/docker-101) tutorial.
 
 ## Docker Image
 The first thing you will need is a docker image. You can find plenty of images on [Docker Hub](hub.docker.com), but we've provided the most simple of examples to illustrate the process of building an image from a Dockerfile.
