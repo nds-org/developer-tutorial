@@ -20,7 +20,7 @@ In this tutorial, you'll learn how to:
 
 Look at the Dockerfile -- it is a set of instructions used to build the image:
 
-```
+```bash
 FROM debian:jessie
 
 RUN apt-get update -y && apt-get install -y cowsay
@@ -40,13 +40,13 @@ CMD ["cowsay", "Hi"]
 
 Open a shell/terminal and run:
 
-```
-docker run --rm ndslabs/cowsay
+```bash
+$ docker run --rm ndslabs/cowsay
 ```
 
 The first time you run a container, the image and any dependencies are downloaded. You should see output similar to:
 
-```
+```bash
 Unable to find image 'ndslabs/cowsay:latest' locally
 latest: Pulling from ndslabs/cowsay
 73e8d4f6bf84: Pull complete
@@ -68,8 +68,8 @@ Status: Downloaded newer image for ndslabs/cowsay:latest
 
 The next time you run the command, the images are cached, so you should simply see:
 
-```
-docker run --rm ndslabs/cowsay
+```bash
+$ docker run --rm ndslabs/cowsay
  ____
 < Hi >
  ----
@@ -83,8 +83,8 @@ docker run --rm ndslabs/cowsay
 Note: The "--rm" flag tells Docker to delete the container when execution completes.  If you don't do this, the containers will stick around after exiting. You can see this with the "docker ps -a" command. 
 
 You can see the images in your image cache using "docker images":
-```
-docker images
+```bash
+$ docker images
 
 REPOSITORY          TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
 ndslabs/cowsay      latest              7f30ada4c040        35 minutes ago      170.9 MB
@@ -95,8 +95,8 @@ ndslabs/cowsay      latest              7f30ada4c040        35 minutes ago      
 The CMD instruction specifies only the default command. You can run any other command -- as long as it's installed in the container:
 
 For example:
-```
-docker run --rm ndslabs/cowsay cowsay Hello
+```bash
+$ docker run --rm ndslabs/cowsay cowsay Hello
  _______
 < Hello >
  -------
@@ -108,8 +108,8 @@ docker run --rm ndslabs/cowsay cowsay Hello
 ```
 
 Or even:
-```
-docker run --rm ndslabs/cowsay ls /usr/games
+```bash
+$ docker run --rm ndslabs/cowsay ls /usr/games
 cowsay
 cowthink
 ```
@@ -118,8 +118,8 @@ cowthink
 
 Sometimes you might want to connect or "shell" into a running container. 
 
-```
-docker run --rm -it ndslabs/cowsay sh
+```bash
+$ docker run --rm -it ndslabs/cowsay sh
 ```
 
 This starts an interactive shell.  You can now run commands, install packages, edit files, etc.  But remember -- since the container was started with "--rm", when you exit your changes will be lost!
@@ -128,38 +128,38 @@ This starts an interactive shell.  You can now run commands, install packages, e
 
 It is possible to change the contents of a container and commit those changes to an image.  In this case, we do not want to use the "--rm" flag:
 
-```
-docker run -it ndslabs/cowsay sh
+```bash
+$ docker run -it ndslabs/cowsay sh
 ```
 
 Once in the interactive shell, you can install additional packages:
-```
-apt-get install -y fortunes
+```bash
+$ apt-get install -y fortunes
 ```
 
 Running the new command, you should see something like:
-```
-fortune
+```bash
+$ fortune
 
 This bag is recyclable.
 ```
 
 Exit out of the shell and use "docker ps -a" to find the container:
-```
-docker ps -a 
+```bash
+$ docker ps -a 
 
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                     PORTS               NAMES
 f31a89705ee2        ndslabs/cowsay      "sh"                56 seconds ago      Exited (0) 6 seconds ago                       cranky_almeida
 ```
 
 You can commit your changes using "docker commit <CONTAINER ID>"
-```
-docker commit f31a89705ee2
+```bash
+$ docker commit f31a89705ee2
 ```
 
 This will create a new image:
-```
-docker images
+```bash
+$ docker images
 
 REPOSITORY          TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
 <none>              <none>              09e96c21ffa1        12 seconds ago      175.9 MB
@@ -167,13 +167,13 @@ ndslabs/cowsay      latest              7f30ada4c040        42 minutes ago      
 ```
 
 You'll want to tag the image for future use:
-```
-docker tag 09e96c21ffa1 myfortune
+```bash
+$ docker tag 09e96c21ffa1 myfortune
 ```
 
 And you can now run a container based on your new image:
-```
-docker run --rm myfortune fortune
+```bash
+$ docker run --rm myfortune fortune
 
 Tell me what to think!!!
 ```
@@ -183,8 +183,7 @@ Tell me what to think!!!
 Another way to change an image is to create a new Dockerfile. In this example, we'll combine our efforts above.
 
 On your local system, create a new file called Dockerfile:
-
-```
+```bash
 FROM debian:jessie
 
 RUN apt-get update -y && apt-get install -y fortune cowsay
@@ -199,14 +198,14 @@ We'll add the fortune package and change the default command
 ## Building the image
 
 Once you have a Dockerfile, you can build a local image:
-```
-docker build -t fortunecow .
+```bash
+$ docker build -t fortunecow .
 ```
 
 There's too much output to post here, but you should see the 4 steps in the Dockerfile.  You can see the resulting image by:
 
-```
-docker images
+```bash
+$ docker images
 
 REPOSITORY          TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
 fortunecow          latest              3ac3a1461552        19 seconds ago      172.9 MB
@@ -215,8 +214,8 @@ ndslabs/cowsay      latest              7f30ada4c040        48 minutes ago      
 ```
 
 And you can run a container based on the new image:
-```
-docker run --rm fortunecow
+```bash
+$ docker run --rm fortunecow
  ______________________________________
 < Today is what happened to yesterday. >
  --------------------------------------
@@ -232,19 +231,19 @@ docker run --rm fortunecow
 
 If you have an account on Docker Hub, you can push this image to make it available to NDS Labs and others to reuse.
 
-```
-docker tag IMAGE USERNAME/IMAGE[:VERSION]
-docker login
-docker push USERNAME/IMAGE[:VERSION]
+```bash
+$ docker tag IMAGE USERNAME/IMAGE[:VERSION]
+$ docker login
+$ docker push USERNAME/IMAGE[:VERSION]
 ```
 
 NOTE: If VERSION is not specified, "latest" is assumed.
 
 For example:
 
-```
-docker tag fortunecow <user>/fortunecow
-docker push <user>/fortunecow
+```bash
+$ docker tag fortunecow <user>/fortunecow
+$ docker push <user>/fortunecow
 ```
 
 
