@@ -118,7 +118,7 @@ You will be prompted for the admin password (default: "admin") in order to add a
 
 Reloading the UI will show your new service(s) listed and ready to add from the left-side pane.
 
-### Testing OwnCloud
+### Testing ownCloud
 Now that we have our owncloud spec loaded, let's try to create an instance of it in NDS Labs!
 
 0. If you're not already running your own instance of NDS Labs, check out our [Setup Documentation](https://github.com/nds-org/ndslabs/blob/master/docs/setup.md).
