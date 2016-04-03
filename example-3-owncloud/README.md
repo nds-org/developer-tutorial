@@ -126,9 +126,9 @@ Now that we have our owncloud spec loaded, let's try to create an instance of it
 2. You should now see "ownCloud" listed with the other services.
 3. Click the **+** button beside "ownCloud" and step through the wizard to configure ownCloud:
   * Choose a name your stack appropriately and click **Next**.
-  * You will be given the option to select MySQL, but do not select it just yet.
+  * You will be given the option to select MySQL, but do not select it. Click **Next**.
   * Choose a size to use for the volume that will attach to this service.
-    * You will be asked to reuse any detached volumes for this service, if any such volumes exist.
+    * If previous volumes matching this service exist, and are not currently attached to another service, the wizard will offer to reuse them.
   * Confirm that your stack looks correct and click **Confirm**
   * You will see your new "ownCloud" stack appear in the **Stacks** tab of the UI
 4. Click the name of the stack to expand the accordion and show a more fine-grained status.
@@ -136,8 +136,11 @@ Now that we have our owncloud spec loaded, let's try to create an instance of it
 6. Wait for the stack to start.
   * NOTE: this may take several minutes the first time, as Docker will pull the image before running it. 
 7. Once the stack has started, navigate to its endpoint by click the link to the right of the service name.
-8. A new tab will open, where you will be able to taken to the ownCloud interface, and continue through the ownCloud setup using their web interface.
-9. You should then be brought to the home page, where you will be able to upload new files and view existing files existing on the volume above.
+8. A new tab will open, where you will be taken to the ownCloud self-installation web interface.
+  * Enter the username and password that you would like to use for the ownCloud administrator.
+  * Once you have chosen your admin credentials, click **Finish Setup**.
+9. You should then be brought to your ownCloud instance's home page, where you will be able to upload new files and view existing files existing on the attached volume.
+10. Upload a test file somewhere into ownCloud using the **+** button at the top-left of the screen.
 
 ### Testing ownCloud + MySQL
 We've tested our ownCloud spec, but what about the MySQL integration?
@@ -147,10 +150,13 @@ We've tested our ownCloud spec, but what about the MySQL integration?
 2. You should now see "ownCloud" listed with the other services.
 3. Click the **+** button beside "ownCloud" and step through the wizard to configure ownCloud:
   * Choose a name your stack appropriately and click **Next**.
-  * Select MySQL as an optional service.
+  * Now, select MySQL as an optional service and click **Next**.
+  * The wizard will now prompt you to enter passwords necessary for MySQL, as specified by the "Config" in the spec above. Because we specified "isPassword" above, you can click the button on the right to generate a secure random password.
+    * Clicking **Advanced Configuration** will also allow you to set the database and username that MySQL will use, if want to change the default values.
   * Choose a size to use for the volumes that will attach to these services.
-    * You will be asked to create one volume each for MySQL and ownCloud.
-    * You will be asked to reuse any detached volumes for these services, if any such volumes exist.
+    * The numbers of the top-right of the colored panel will allow you to switch between the volume requirements for this stack, if more than one exist.
+    * You will be asked to create one volume each for ownCloud and MySQL.
+    * If previous volumes matching these services exist, and are not currently attached to another service, the wizard will offer to reuse them.
   * Confirm that your stack looks correct and click **Confirm**.
   * You will see your new "ownCloud" stack appear in the **Stacks** tab of the UI.
 4. Click the name of the stack to expand the accordion and show a more fine-grained status.
@@ -159,14 +165,24 @@ We've tested our ownCloud spec, but what about the MySQL integration?
 6. Wait for the stack to start.
   * NOTE: this may take several minutes the first time, as Docker will pull the image before running it. 
 7. Once the stack has started, navigate to its endpoint by click the link to the right of the service name.
-8. A new tab will open, where you will be able to taken to the ownCloud interface, and continue through the ownCloud setup using their web interface.
-9. You should then be brought to the home page, where you will be able to upload new files and view existing files existing on the volume above.
-10. Upload a test file somewhere into ownCloud using the button at the top-left of the screen.
-11. Jump over to your terminal and execute `docker ps` and locate the running MySQL container.
-12. Execute `docker exec -it <container id> mysql -u owncloud -p` and enter the MySQL password for the "owncloud" user. This will drop you into the container at the mysql shell.
- * You can view the database name, username, and password by clicking the "View Config" button next to MySQL in the ownCloud stack service list of the NDS Labs web interface.
-13. Execute the following query to verify that your new file upload was persisted to MySQL `select path from owncloud.oc_filecache order by path;`.
-14. You should see all of your files, including the newly-uploaded file, ordered by file path and listed in the output.
+8. A new tab will open, where you will be taken to the ownCloud self-installation web interface.
+  * Enter the username and password that you would like to use for the ownCloud administrator.
+  * During the setup, be sure to expand the "Storage & database".
+  * Choose **MySQL / MariaDB** to specify your MySQL instance details.
+  * You will be prompted to enter the database, username, and password that you specified while configuring MySQL, as well as the address of the running instance.
+    * Back at the NDS Labs interface, click the **Config** button to the right of the service name under your ownCloud stack. 
+    * The database, username, and password are listed under "Environment".
+    * The address where ownCloud can reach MySQL is listed under "Endpoints" as the "Internal Address".
+    * NOTE: This MySQL instance is not exposed to the public internet, so there is no "External Address" listed.
+  * Once you have entered the details of the running MySQL instance, click **Finish Setup**.
+9. You should then be brought to your ownCloud instance's home page, where you will be able to upload new files and view existing files existing on the attached volume.
+10. Upload a test file somewhere into ownCloud using the **+** button at the top-left of the screen.
+11. To verify that MySQL is receiving updates from ownCloud, let's find a reference to the file you just uploaded in the MySQL database. 
+  * Jump over to your terminal and execute `docker ps | grep mysql` to locate the running MySQL container and grab its container id.
+  * Execute `docker exec -it <container id> mysql -u owncloud -p` and enter the MySQL password for the "owncloud" user. This will drop you into the container at the mysql shell.
+    * Click the **Config** button to the right of the service name under your ownCloud stack and copy / paste the MySQL password into the prompt. 
+  * Execute the following query to verify that your new file upload was persisted to MySQL `select path from owncloud.oc_filecache order by path;`.
+  * You should see all of your files, including the newly-uploaded file, ordered by file path and listed in the output.
 
 ## Success!
 Congratulations! You made it through the entire tutorial.
