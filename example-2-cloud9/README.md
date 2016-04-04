@@ -93,11 +93,14 @@ Now that we have our cloud9 spec loaded, let's try to create an instance of it i
 You can use the console at the bottom of the editor to execute Git commands, allowing you to clone source repositories, modify them, and commit/push your changes back. Although your workspace will be initially empty, you can create new files and edit them as you see fit. These new files will be saved across container restarts.
 
 Try it for yourself:
+
 1. Create a new file called "test" and place some text into it.
-2. Shut down the cloud9 stack.
-3. Once it has fully shut down, start the cloud9 stack up once again.
-4. Once the stack has restarted, navigate to its endpoint by click the link to the right of the service name.
-5. A new tab will open, where you will be able to taken to the Cloud9 IDE interface, where should see your workspace exactly as you left it.
+2. Shut down the cloud9 stack and delete it. When prompted, choose "Yes, but save the data".
+  * This will retain your volume for reuse.
+3. Create a new cloud9 stack. When prompted, be sure to reuse your existing cloud9 volume.
+4. Start the new cloud9 stack, and navigate to its endpoint by click the link to the right of the service name.
+  * A new tab will open, where you will be able to taken to the Cloud9 IDE interface.
+5. You should see your workspace exactly as you left it, including the "test" file that you created.
 
 ## Next Steps
 Now that you have been introduced to persisted volumes and how to define them in a spec, let's move to a realistic example of a service to add: [ownCloud](https://github.com/nds-org/developer-tutorial/tree/master/example-3-owncloud).
