@@ -3,6 +3,9 @@ This repository contains several tutorials describing how to create custom [serv
 
 This allows you to import new stacks and services to be launched from [NDS Labs](https://github.com/nds-org/ndslabs).
 
+## Presentation Slides
+To view the slides shown at the NDSC5 tutorial, click [here](https://docs.google.com/presentation/d/1Ll0EwFpVXVdZAM44tBeT5q_mq7WXIwBDup4Km7Np37o).
+
 ## NDS Labs Setup
 To set up your own instance of NDS Labs, see the [Setup Documentation](https://github.com/nds-org/ndslabs/blob/master/docs/setup.md).
 
