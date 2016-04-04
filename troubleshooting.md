@@ -1,6 +1,6 @@
-## Troubleshooting tips
+# Troubleshooting tips
 
-# Errors during startup or shutdown
+## Errors during startup or shutdown
 
 If a service is having problems during the startup or shutdown phase, there are a few things you can do.
 
