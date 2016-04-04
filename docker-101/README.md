@@ -119,66 +119,14 @@ cowthink
 Sometimes you might want to connect or "shell" into a running container. 
 
 ```bash
-$ docker run --rm -it ndslabs/cowsay sh
+$ docker exec -it ndslabs/cowsay sh
 ```
 
 This starts an interactive shell.  You can now run commands, install packages, edit files, etc.  But remember -- since the container was started with "--rm", when you exit your changes will be lost!
 
-## Committing changes
 
-It is possible to change the contents of a container and commit those changes to an image.  In this case, we do not want to use the "--rm" flag:
 
-```bash
-$ docker run -it ndslabs/cowsay sh
-```
-
-Once in the interactive shell, you can install additional packages:
-```bash
-$ apt-get install -y fortunes
-```
-
-Running the new command, you should see something like:
-```bash
-$ fortune
-
-This bag is recyclable.
-```
-
-Exit out of the shell and use "docker ps -a" to find the container:
-```bash
-$ docker ps -a 
-
-CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                     PORTS               NAMES
-f31a89705ee2        ndslabs/cowsay      "sh"                56 seconds ago      Exited (0) 6 seconds ago                       cranky_almeida
-```
-
-You can commit your changes using "docker commit <CONTAINER ID>"
-```bash
-$ docker commit f31a89705ee2
-```
-
-This will create a new image:
-```bash
-$ docker images
-
-REPOSITORY          TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
-<none>              <none>              09e96c21ffa1        12 seconds ago      175.9 MB
-ndslabs/cowsay      latest              7f30ada4c040        42 minutes ago      170.9 MB
-```
-
-You'll want to tag the image for future use:
-```bash
-$ docker tag 09e96c21ffa1 myfortune
-```
-
-And you can now run a container based on your new image:
-```bash
-$ docker run --rm myfortune fortune
-
-Tell me what to think!!!
-```
-
-## Creating a Dockerfile
+## Creating your own Dockerfile
 
 Another way to change an image is to create a new Dockerfile. In this example, we'll combine our efforts above.
 
@@ -246,7 +194,15 @@ $ docker tag fortunecow <user>/fortunecow
 $ docker push <user>/fortunecow
 ```
 
-
 ## Next steps
 
-Those are just the basics.  See the Docker tutorials and "docker --help" for more information.
+These are just the basics.  See the Docker tutorials and "docker --help" for more information.
+
+## Additional resources
+
+* [Docker cheat-sheet](https://github.com/wsargent/docker-cheat-sheet)
+* [Docker bash completion](https://raw.githubusercontent.com/docker/docker/master/contrib/completion/bash/docker)
+* [Docker patterns](http://hokstad.com/docker/patterns)
+* [Container monitoring](https://www.youtube.com/watch?v=S-4wxLgpZdE)
+* [Docker storage drivers](https://www.youtube.com/watch?v=hk6wqNBLlxQ)
+* [Dockerfile best practices](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/)
