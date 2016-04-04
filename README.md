@@ -49,5 +49,5 @@ An extremely simple example, [Cowsay](https://github.com/nds-org/developer-tutor
 #### 2.) Cloud9 IDE
 A slightly more advanced example, [Cloud9](https://github.com/nds-org/developer-tutorial/tree/master/example-2-cloud9) introduces the notion of "volumes" into our spec and demonstrates how to persist data between Docker container restarts.
 
-#### 3.) OwnCloud
+#### 3.) ownCloud
 The most complex example, [ownCloud](https://github.com/nds-org/developer-tutorial/tree/master/example-3-owncloud), mimics that of an actual stack that might be included in NDS Labs, introducing how to define dependencies and configuration options in the spec.
