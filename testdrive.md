@@ -24,7 +24,7 @@ Users may simultaneously use up to:
 Go check out our catalog and, if you feel so inclined, test drive some services.
 
 I would reccomend checking out one or more of the following:
-* [Docker](https://nationaldataservice.atlassian.net/wiki/display/NDSC/Docker) - An emerging technology that is changing everything
+* [Docker](https://nationaldataservice.atlassian.net/wiki/display/NDSC/Docker) - An emerging technology that is changing everything (see [tutorial](docker-101/README.md))
 * [Cloud9](https://nationaldataservice.atlassian.net/wiki/display/NDSC/Cloud9) - Pick your favorite flavor of this Cloud-based IDE
 * [Girder](https://nationaldataservice.atlassian.net/wiki/display/NDSC/Girder) - An open source data management platform
 * [Sufia](https://nationaldataservice.atlassian.net/wiki/display/NDSC/Sufia) - Extends Hydra to provide a user interface around common repository features
