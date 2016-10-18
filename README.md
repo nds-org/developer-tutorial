@@ -28,3 +28,15 @@ See [Developer Support](develop.md)
 
 ## Docker Basics
 Start learning Docker with our [Docker 101](docker-101/README.md) tutorial
+
+# Feedback
+Please feel free to give comments or ask questions during the tutorial.
+
+If you would prefer, you can also send feedback through Workbench itself by logging in and accessing the Contact Us view:
+1. Select the (?) dropdown from the top-right
+2. Click "Contact Us"
+3. You should be brought to the Contact Us view
+4. If you are logged in, a form will allow you to submit feedback to the Labs Workbench development team
+
+We appreciate any and all feedback given, and thank you for your interest in trying our product.
+
