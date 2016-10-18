@@ -1,4 +1,4 @@
-# NDS Labs Developer Tutorial
+# Labs Workbench: Hack Day Tutorial
 This repository contains several tutorials describing how to use the Labs Workbench UI to:
 * Test drive and compare [prefab applications](https://nationaldataservice.atlassian.net/wiki/display/NDSC/NDS+Labs+Services)
 * Develop, build, test, and publish new prefab applications in the form of [Docker images](https://hub.docker.com/)
@@ -9,7 +9,10 @@ Hack day participants should navigate to the [Labs Workbench](https://www.workbe
 
 We will approve accounts belonging to the individuals registered for the NDSC6 hack day on 10/19/16.
 
-Please be advised that this service is still in beta, and should not be used to house critical or sensitive data. See [Appectable Use Policy](https://nationaldataservice.atlassian.net/wiki/display/NDSC/Acceptable+Use+Policy).
+# Fair Warning
+Please be advised that Labs Workbench is still in beta, and should not be used to house critical or sensitive data.
+
+See [Appectable Use Policy] for more details (https://nationaldataservice.atlassian.net/wiki/display/NDSC/Acceptable+Use+Policy).
 
 # Test Drive Prefab Applications
 `See Browse and Manage Applications video`
