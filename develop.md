@@ -1,21 +1,16 @@
-# Developer Support
-`See Docker Build / Tag / Push video`
+# Developer Support Example
+This tutorial details workflows for developing applications within Labs Workbench.
 
-Let's use a very simple example to start: **cowsay-php**.
+## Fair Warning
+Please be advised that Labs Workbench is still in beta, and should not be used to house critical or sensitive data.
 
-In this example you will:
-* Learn the basics of using Docker
-* Using a Docker-enabled environment, build and push an image that can be consumed by Labs Workbench
-* Customize volume maps and environment variables using Labs Workbench (using the Add/Edit Service view)
-* Run any image from Docker Hub using Labs Workbench (using the Add/Edit Spec view)
+See [Appectable Use Policy](https://nationaldataservice.atlassian.net/wiki/display/NDSC/Acceptable+Use+Policy) for more details.
 
 # Docker Basics
 Start learning Docker with our [Docker 101](docker-101/README.md) tutorial.
 
 ## Sign Up for Docker Hub
 If you don't already have an account, and wish to push your own custom images as a part of this tutorial, please register for an account on [Docker Hub](hub.docker.com).
-
-# Simple Example: Cowsay
 
 # Running Docker in Labs Workbench
 We offer several developer environments that allow you to build, tag, and push your own Docker images:
@@ -24,7 +19,17 @@ We offer several developer environments that allow you to build, tag, and push y
 
 Start up one of these environments to gain access to a Docker-enabled terminal.
 
+We will start with a very simple example: **cowsay-php**.
+
+In this example you will:
+* Learn the basics of using Docker
+* Using a Docker-enabled environment, build and push an image that can be consumed by Labs Workbench
+* Run any image from Docker Hub using Labs Workbench (using the Add/Edit Spec view)
+
+See a [video](https://nationaldataservice.atlassian.net/wiki/display/NDSC/Feature+Overview#FeatureOverview-Dockerbuild/tag/push) of this feature in action!
+
 ## Building Docker Images
+
 The first thing you will need is a docker image. You can find plenty of images on [Docker Hub](hub.docker.com), but we've provided the most simple of examples to illustrate the process of building an image from a Dockerfile.
 
 You can build the **cowsay-php** image yourself from source by executing the following command:
@@ -41,7 +46,6 @@ cowsay-php                                 latest              bf5dbf5675ef     
 
 ## Pushing to Docker Hub
 If you have created a [Docker Hub](hub.docker.com) account, you can push this image to Docker Hub.
-
 
 Login to your Docker Hub account:
 ```bash
@@ -77,10 +81,7 @@ Now that we have our cowsay spec loaded, let's try to create an instance of it i
 7. Once the application has started, navigate to its endpoint by click the link to the right of the service name.
 8. A new tab will open, where you will be able to admire your cow in all its majesty.
 
-### Developing a Running Application
-It is possible to map your source into the Labs Workbench service and 
-
-NOTE: This works very nicely for interpreted languages, but may require an extra step or two for compiled languages.
+See a [video](https://nationaldataservice.atlassian.net/wiki/display/NDSC/Feature+Overview#FeatureOverview-Developmentenvironment-simpleexample) of this feature in action!
 
 # A More Complex Example: Clowder Extractors
 For many projects, setting up a developer environment to build and test the source of a particular application can often be more tedious and error-prone than installing the software itself.
@@ -95,8 +96,10 @@ For example:
 * The Cloud9 Go IDE can be used to develop the Labs Workbench API server itself
 * With **novnc** / **xpra** Docker base images, adding your favorite graphical desktop applications is a snap!
 
+See a [video](https://nationaldataservice.atlassian.net/wiki/display/NDSC/Feature+Overview#FeatureOverview-Developmentenvironment-Clowderextractordevelopment) of this feature in action!
+
 # An Even More Complex Example: Securely access remote development services while developing locally
-If you'd rather use your desktop IDE than develop in the cloud, we offer a service called **HTTP Tunnel** (based on [Chisel](https://github.com/jpillora/chisel).
+If you'd rather use your desktop IDE than develop in the cloud, we offer a service called **HTTP Tunnel** (based on [Chisel](https://github.com/jpillora/chisel)).
 
 1. Start the Chisel application in Labs Workbench
 2. Download and install the Chisel client
@@ -106,4 +109,4 @@ A secure tunnel will be established to the private subnet used by Labs Workbench
 
 This will allow you to develop locally against remotely running instances of MySQL, MongoDB, PostgreSQL, RabbitMQ or any other Docker-ized service - without exposing them to the public internet!
 
-`See Development environment - remote access video`
+See a [video](https://nationaldataservice.atlassian.net/wiki/display/NDSC/Feature+Overview#FeatureOverview-Developmentenvironment-remoteaccess) of this feature in action!

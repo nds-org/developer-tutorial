@@ -7,15 +7,15 @@ This repository contains several tutorials describing how to use the Labs Workbe
 # Accessing Labs Workbench
 The Labs Workbench Beta can be accessed here: https://www.workbench.nationaldataservice.org
 
-## Registration
-Hack day participants should navigate to the [Labs Workbench](https://www.workbench.nationaldataservice.org/) and register for an account.
-
-We will approve accounts belonging to the individuals registered for the NDSC6 hack day on 10/19/16.
-
 ## Fair Warning
 Please be advised that Labs Workbench is still in beta, and should not be used to house critical or sensitive data.
 
 See [Appectable Use Policy](https://nationaldataservice.atlassian.net/wiki/display/NDSC/Acceptable+Use+Policy) for more details.
+
+## Registration
+Hack day participants should navigate to the [Labs Workbench](https://www.workbench.nationaldataservice.org/) and register for an account.
+
+We will approve accounts belonging to the individuals registered for the NDSC6 hack day on 10/19/16.
 
 # Test Drive Prefab Applications
 See [Test Driving Prefab Applications](testdrive.md)
