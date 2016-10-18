@@ -33,6 +33,7 @@ Start learning Docker with our [Docker 101](docker-101/README.md) tutorial
 Please feel free to give comments or ask questions during the tutorial.
 
 If you would prefer, you can also send feedback through Workbench itself by logging in and accessing the Contact Us view:
+
 1. Select the (?) dropdown from the top-right
 2. Click "Contact Us"
 3. You should be brought to the Contact Us view
