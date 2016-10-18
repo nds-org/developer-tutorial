@@ -27,4 +27,4 @@ See [Extending Your Personal Catalog](personalize.md)
 See [Developer Support](develop.md)
 
 ## Docker Basics
-Start learning Docker with our [Docker 101](docker-101.md) tutorial
+Start learning Docker with our [Docker 101](docker-101/README.md) tutorial

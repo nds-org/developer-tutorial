@@ -10,7 +10,7 @@ In this example you will:
 * Run any image from Docker Hub using Labs Workbench (using the Add/Edit Spec view)
 
 # Docker Basics
-Start learning Docker with our [Docker 101](docker-101.md) tutorial.
+Start learning Docker with our [Docker 101](docker-101/README.md) tutorial.
 
 ## Sign Up for Docker Hub
 If you don't already have an account, and wish to push your own custom images as a part of this tutorial, please register for an account on [Docker Hub](hub.docker.com).
