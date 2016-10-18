@@ -10,6 +10,7 @@ See a [video](https://nationaldataservice.atlassian.net/wiki/display/NDSC/Featur
 
 ## Share Your New Applications with Other Users
 To export (share) your spec with another user:
+
 1. Navigate to the Catalog view
 2. Locate the spec you would like to share and choose **View JSON** from the dropdown
 3. Click "Copy to Clipboard"
@@ -25,6 +26,7 @@ To import a spec that another user has shared with you:
 
 ## Publish Your New Application to the Official Catalog
 Once you are happy with a spec, you can submit it to the official catalog to share it with all users:
+
 1. Fork https://github.com/nds-org/ndslabs-specs
 2. Add your spec
 3. Submit a pull request back to nds-org/ndslabs-specs
