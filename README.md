@@ -1,8 +1,9 @@
 # Labs Workbench: Hack Day Tutorial
 This repository contains several tutorials describing how to use the Labs Workbench UI to:
 * Test drive and compare [prefab applications](https://nationaldataservice.atlassian.net/wiki/display/NDSC/NDS+Labs+Services)
-* Develop, build, test, and publish new prefab applications in the form of [Docker images](https://hub.docker.com/)
 * Extend your personal catalog of [prefab applications](https://github.com/nds-org/ndslabs-specs)
+* Learn the basics of using Docker to run, build, and push images to Docker Hub for public consumption
+* Develop, build, test, and publish new prefab applications in the form of [Docker images](https://hub.docker.com/)
 
 # Accessing Labs Workbench
 The Labs Workbench Beta can be accessed here: https://www.workbench.nationaldataservice.org
