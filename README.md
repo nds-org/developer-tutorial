@@ -1,56 +1,34 @@
 # NDS Labs Developer Tutorial
-This repository contains several tutorials describing how to create custom [service specs](https://github.com/nds-org/ndslabs-specs).
+This repository contains several tutorials describing how to use the Labs Workbench UI to:
+* Test drive and compare prefab applications
+* Develop, build, and publish new prefab applications in the form of Docker images
+* Extend your personal catalog of [prefab applications](https://github.com/nds-org/ndslabs-specs)
 
-This allows you to import new stacks and services to be launched from [NDS Labs](https://github.com/nds-org/ndslabs).
+# Register for Labs Workbench
+Hack day participants should navigate to the [Labs Workbench](https://www.workbench.nationaldataservice.org/) and register for an account.
 
-## Presentation Slides
-To view the slides shown at the NDSC5 tutorial, click [here](https://docs.google.com/presentation/d/1Ll0EwFpVXVdZAM44tBeT5q_mq7WXIwBDup4Km7Np37o).
+We will approve accounts belonging to the individuals registered for the NDSC6 hack day on 10/19/16.
 
-## NDS Labs Setup
-To set up your own instance of NDS Labs, see the [Setup Documentation](https://github.com/nds-org/ndslabs/blob/master/docs/setup.md).
+Please be advised that this service is still in beta, and should not be used to house critical or sensitive data. See [Appectable Use Policy](https://nationaldataservice.atlassian.net/wiki/display/NDSC/Acceptable+Use+Policy).
 
-## Customizing NDS Labs
-Now that you have your own instance of NDS Labs running, its time to customize it!
+# Test Drive Prefab Applications
+See Browse and manage applications video
 
-In order to load a custom service into NDS Labs, only two things are needed:
-* A [Docker](https://docs.docker.com/linux/) image
-* A [JSON spec](https://opensource.ncsa.illinois.edu/confluence/display/NDS/NDS+Labs+Service+Specification) describing the image
+# Develop / Build / Publish Docker Images
+See Docker Build / Tag / Push video
 
-### Docker Images
+# Customizing Your Personal Catalog
+## Create from scratch
+See Create User-Defined Applications video
 
-The first thing you will need is a Docker image. You can find plenty of images on [Docker Hub](hub.docker.com), including all images used in [NDS Labs](http://hub.docker.com/r/ndslabs).
+## Configure / Customize Prefab Applications
+???
 
-New to Docker? Start learning Docker with our [Docker 101](https://github.com/nds-org/developer-tutorial/blob/master/docker-101/README.md) tutorial.
+## Import New Applications from Other Users
+???
 
-### NDS Labs service specifications
+## Share Your New Applications with Other Users
+???
 
-A [service spec](https://github.com/nds-org/ndslabs-specs) is our way of telling NDS Labs what an image needs in order to run.
-
-Several examples are included to walk you through what's involved in creating a spec.
-
-#### Loading a Custom Spec into NDS Labs
-Now, run the following command to load this custom spec into NDS Labs:
-```bash
-ndslabsctl add service -f spec.json
-```
-
-You will be prompted for the admin password (default: "admin") in order to add a service.
-
-Reloading the UI should show your new service(s) listed and ready to add from the left-side pane.
-
-### Examples
-
-Obtain a local copy of this tutorial by running
-```bash
-git clone https://github.com/nds-org/developer-tutorial.git /usr/local/lib/tutorial
-cd /usr/local/lib/tutorial
-```
-
-#### 1.) Cowsay
-An extremely simple example, [Cowsay](https://github.com/nds-org/developer-tutorial/tree/master/example-1-cowsay) introduces Docker and demonstrates what goes into authoring the most basic NDS Labs service spec.
-
-#### 2.) Cloud9 IDE
-A slightly more advanced example, [Cloud9](https://github.com/nds-org/developer-tutorial/tree/master/example-2-cloud9) introduces the notion of "volumes" into our spec and demonstrates how to persist data between Docker container restarts.
-
-#### 3.) ownCloud
-The most complex example, [ownCloud](https://github.com/nds-org/developer-tutorial/tree/master/example-3-owncloud), mimics that of an actual stack that might be included in NDS Labs, introducing how to define dependencies and configuration options in the spec.
+### Publish Your New Application to the Official Catalog
+???

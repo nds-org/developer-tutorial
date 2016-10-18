@@ -2,15 +2,20 @@
 
 This tutorial is based largely on the excellent Docker [Getting Started](https://docs.docker.com/linux/step_four/) materials.
 
-## Prerequisites
+# Prerequisites
 * Access to a system running Docker
 
-## What you'll learn
+# What you'll learn
 In this tutorial, you'll learn how to:
 * Run an existing Docker image
 * Modify and commit changes to an image
 * Build an image from a Dockerfile
 * Push an image to Dockerhub 
+
+# Basic Usage
+These are just the basics of using Docker.
+
+See the Docker tutorials and "docker --help" for more information.
 
 ## Finding images on Dockerhub
 
@@ -90,42 +95,6 @@ REPOSITORY          TAG                 IMAGE ID            CREATED             
 ndslabs/cowsay      latest              7f30ada4c040        35 minutes ago      170.9 MB
 ```
 
-## Running a different command
-
-The CMD instruction specifies only the default command. You can run any other command -- as long as it's installed in the container:
-
-For example:
-```bash
-$ docker run --rm ndslabs/cowsay cowsay Hello
- _______
-< Hello >
- -------
-        \   ^__^
-         \  (oo)\_______
-            (__)\       )\/\
-                ||----w |
-                ||     ||
-```
-
-Or even:
-```bash
-$ docker run --rm ndslabs/cowsay ls /usr/games
-cowsay
-cowthink
-```
-
-## Connecting to a container
-
-Sometimes you might want to connect or "shell" into a running container. 
-
-```bash
-$ docker exec -it ndslabs/cowsay sh
-```
-
-This starts an interactive shell.  You can now run commands, install packages, edit files, etc.  But remember -- since the container was started with "--rm", when you exit your changes will be lost!
-
-
-
 ## Creating your own Dockerfile
 
 Another way to change an image is to create a new Dockerfile. In this example, we'll combine our efforts above.
@@ -194,15 +163,52 @@ $ docker tag fortunecow <user>/fortunecow
 $ docker push <user>/fortunecow
 ```
 
-## Next steps
+# Advanced Usage
+Depending on how you plan to use Docker, you may find the following tip useful.
 
-These are just the basics.  See the Docker tutorials and "docker --help" for more information.
+See the Docker tutorials and "docker --help" for more information.
 
-## Additional resources
+## Running a different command
 
-* [Docker cheat-sheet](https://github.com/wsargent/docker-cheat-sheet)
+The CMD instruction specifies only the default command. You can run any other command -- as long as it's installed in the container:
+
+For example:
+```bash
+$ docker run --rm ndslabs/cowsay cowsay Hello
+ _______
+< Hello >
+ -------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+```
+
+Or even:
+```bash
+$ docker run --rm ndslabs/cowsay ls /usr/games
+cowsay
+cowthink
+```
+
+## Connecting to a container
+
+Sometimes you might want to connect or "shell" into a running container. 
+
+```bash
+$ docker exec -it ndslabs/cowsay sh
+```
+
+This starts an interactive shell.  You can now run commands, install packages, edit files, etc.  But remember -- since the container was started with "--rm", when you exit your changes will be lost!
+
+# Official resources
+* [Dockerfile reference](https://docs.docker.com/engine/reference/builder/)
+* [Dockerfile best practices](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/)
 * [Docker bash completion](https://raw.githubusercontent.com/docker/docker/master/contrib/completion/bash/docker)
+
+# Additional resources
+* [Docker cheat-sheet](https://github.com/wsargent/docker-cheat-sheet)
 * [Docker patterns](http://hokstad.com/docker/patterns)
 * [Container monitoring](https://www.youtube.com/watch?v=S-4wxLgpZdE)
 * [Docker storage drivers](https://www.youtube.com/watch?v=hk6wqNBLlxQ)
-* [Dockerfile best practices](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/)
