@@ -15,7 +15,7 @@ We will approve accounts belonging to the individuals registered for the NDSC6 h
 ## Fair Warning
 Please be advised that Labs Workbench is still in beta, and should not be used to house critical or sensitive data.
 
-See [Appectable Use Policy] for more details (https://nationaldataservice.atlassian.net/wiki/display/NDSC/Acceptable+Use+Policy).
+See [Appectable Use Policy](https://nationaldataservice.atlassian.net/wiki/display/NDSC/Acceptable+Use+Policy) for more details.
 
 # Test Drive Prefab Applications
 See [Test Driving Prefab Applications](testdrive.md)
