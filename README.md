@@ -17,6 +17,8 @@ Hack day participants should navigate to the [Labs Workbench](https://www.workbe
 
 We will approve accounts belonging to the individuals registered for the NDSC6 hack day on 10/19/16.
 
+See a [video](https://nationaldataservice.atlassian.net/wiki/display/NDSC/Feature+Overview#FeatureOverview-Demonstrationvideos) of this feature in action!
+
 # Test Drive Prefab Applications
 See [Test Driving Prefab Applications](testdrive.md)
 
