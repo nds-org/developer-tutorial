@@ -4,6 +4,8 @@ This tutorial is based largely on the excellent Docker [Getting Started](https:/
 
 # Prerequisites
 * Access to a system running Docker
+OR
+* Access to a Labs Workbench account, where you can run Docker in the cloud
 
 # What you'll learn
 In this tutorial, you'll learn how to:
