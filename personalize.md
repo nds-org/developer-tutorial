@@ -10,13 +10,12 @@ You can also add your applications to Labs Workbench.
 6. Add the application 
 7. Navigate to the Applications view and start-up your added applications
 
+See a [video](https://nationaldataservice.atlassian.net/wiki/display/NDSC/Feature+Overview#FeatureOverview-Createuser-definedapplications) of this feature in action!
+
 ## Fair Warning
 Please be advised that Labs Workbench is still in beta, and should not be used to house critical or sensitive data.
 
 See [Appectable Use Policy](https://nationaldataservice.atlassian.net/wiki/display/NDSC/Acceptable+Use+Policy) for more details.
-
-## Create from existing Docker image
-See a [video](https://nationaldataservice.atlassian.net/wiki/display/NDSC/Feature+Overview#FeatureOverview-Createuser-definedapplications) of this feature in action!
 
 ## Share Your New Applications with Other Users
 To export (share) your spec with another user:
