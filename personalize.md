@@ -1,5 +1,15 @@
 # Extending Your Personal Catalog
 
+You can also add your applications to Labs Workbench.
+
+1. Log into Labs Workbench
+2. Navigate to the Catalog view
+3. Select "Create"
+4. At a minimum, specify the short name, display name, and Docker image name. Specify ports if appropriate.
+5. Select "Save"
+6. Add the application 
+7. Navigate to the Applications view and start-up your added applications
+
 ## Fair Warning
 Please be advised that Labs Workbench is still in beta, and should not be used to house critical or sensitive data.
 
