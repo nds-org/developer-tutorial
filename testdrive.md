@@ -3,8 +3,8 @@ Labs Workbench makes it easy to test out new technologies and compare them with 
 
 1. Log into Labs Workbench
 2. Navigate to the Catalog view
-3. Add ay applications that you want to try out
-4. Navigate to the Applications view and start up your added applications
+3. Add an application that you want to try out
+4. Navigate to the Applications view and start-up your added applications
 5. Access logs, consoles, configuration, or shut down / restart / delete your application instance
 
 See a [video](https://nationaldataservice.atlassian.net/wiki/display/NDSC/Feature+Overview#FeatureOverview-Browseandmanageapplications) of this feature in action!
