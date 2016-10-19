@@ -7,6 +7,12 @@ This tutorial is based largely on the excellent Docker [Getting Started](https:/
 OR
 * Access to a Labs Workbench account, where you can run Docker in the cloud
 
+If you haven't already, clone this repo:
+
+```
+git clone https://github.com/nds-org/developer-tutorial.git
+```
+
 # What you'll learn
 In this tutorial, you'll learn how to:
 * Run an existing Docker image
